@@ -6,6 +6,7 @@
 [core]
 	editor = nvim
 	pager = delta
+	excludesfile = /home/daniel/.gitignore_global
 [interactive]
 	diffFilter = delta --color-only
 [delta]
