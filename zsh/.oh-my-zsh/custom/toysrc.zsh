@@ -11,11 +11,11 @@ alias bonsai=cbonsai
 alias matrix="cmatrix -s -b"
 
 # color test shell scripts
-alias bloks="source ~/.scripts/cli-toys/bloks"
-alias colorbars="source ~/.scripts/cli-toys/colorbars"
-alias colortest="source ~/.scripts/cli-toys/colortest"
-alias colortest-slim="source ~/.scripts/cli-toys/colortest-slim"
-alias colorview="source ~/.scripts/cli-toys/colorview"
+alias bloks="source ~/.scripts/colorscripts/bloks"
+alias colorbars="source ~/.scripts/colorscripts/colorbars"
+alias colortest="source ~/.scripts/colorscripts/colortest"
+alias colortest-slim="source ~/.scripts/colorscripts/colortest-slim"
+alias colorview="source ~/.scripts/colorscripts/colorview"
 
 # steam locomotive
 alias train="sl -e"
@@ -24,7 +24,7 @@ alias flytrain="sl -alFe"
 alias loltrain="sl -e | lolcat"
 
 # display smaller neofetch-like system info
-alias jfetch="source ~/.scripts/cli-toys/jfetch"
+alias jfetch="source ~/.scripts/jfetch"
 
 # weather
 weatherin() { curl -s wttr.in/"$1" }
