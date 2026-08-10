@@ -10,7 +10,7 @@ alias bonsai=cbonsai
 # screensavers
 alias matrix="cmatrix -s -b"
 
-# color test shell scripts
+# colorscripts
 alias bloks="source ~/.scripts/colorscripts/bloks"
 alias colorbars="source ~/.scripts/colorscripts/colorbars"
 alias colortest="source ~/.scripts/colorscripts/colortest"
@@ -26,5 +26,5 @@ alias loltrain="sl -e | lolcat"
 # display smaller neofetch-like system info
 alias jfetch="source ~/.scripts/jfetch"
 
-# weather
+# local weather
 weatherin() { curl -s wttr.in/"$1" }
