@@ -1,4 +1,4 @@
-# ignore all plugins installed by TPM within Tmux
+# ignore all plugins installed by TPM for Tmux
 tmux/.config/tmux/plugins/*
 
 # except for these plugins
