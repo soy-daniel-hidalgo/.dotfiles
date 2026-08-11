@@ -14,15 +14,6 @@ art="
            \\\\\\033[0m
 "
 
-# ASCII Art
-# read -r -d '' art << 'EOF'
-#              .--~~,__
-# :-....,-------`~~'._.'
-#  `-,,,  ,_      ;'~U'
-#   _,-' ,'`-__; '--.
-#  (_/'~~      ''''(;
-# EOF
-
 # read system info
 read -r host < /proc/sys/kernel/hostname
 
