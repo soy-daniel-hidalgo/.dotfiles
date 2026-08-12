@@ -130,8 +130,7 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
-# Shell integrations
-
+# Docs: https://github.com/junegunn/fzf
 # Set up fzf key bindings and fuzzy completion
 # source <(fzf --zsh)
 
