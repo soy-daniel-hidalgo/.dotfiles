@@ -1,30 +1,30 @@
-# Package managers dnf5, dnf & apt
+# Package managers dnf5 & apt
 
 # Update dependencies
-if command -v dnf5 &> /dev/null; then
-    alias update="sudo dnf5 update -y"
-elif command -v dnf &> /dev/null; then
-    alias update="sudo dnf upgrade -y"
-elif command -v apt &> /dev/null; then
-    alias update="sudo apt update && sudo apt upgrade -y"
+if command -v dnf5 &>/dev/null; then
+  alias update="sudo dnf5 update -y"
+elif command -v dnf &>/dev/null; then
+  alias update="sudo dnf upgrade -y"
+elif command -v apt &>/dev/null; then
+  alias update="sudo apt update && sudo apt upgrade -y"
 fi
 
 # Autoremove unneeded packages
-if command -v dnf5 &> /dev/null; then
-    alias autoremove="sudo dnf5 autoremove"
-elif command -v dnf &> /dev/null; then
-    alias autoremove="sudo dnf autoremove"
-elif command -v apt &> /dev/null; then
-    alias autoremove="sudo apt autoremove"
+if command -v dnf5 &>/dev/null; then
+  alias autoremove="sudo dnf5 autoremove"
+elif command -v dnf &>/dev/null; then
+  alias autoremove="sudo dnf autoremove"
+elif command -v apt &>/dev/null; then
+  alias autoremove="sudo apt autoremove"
 fi
 
 # List installed packages
-if command -v dnf5 &> /dev/null; then
-    alias installed="dnf5 list --installed | fzf"
-elif command -v dnf &> /dev/null; then
-    alias installed="dnf list --installed | fzf"
-elif command -v apt &> /dev/null; then
-    alias installed="apt list --installed | fzf"
+if command -v dnf5 &>/dev/null; then
+  alias installed="dnf5 list --installed | fzf"
+elif command -v dnf &>/dev/null; then
+  alias installed="dnf list --installed | fzf"
+elif command -v apt &>/dev/null; then
+  alias installed="apt list --installed | fzf"
 fi
 
 # Quick access
@@ -62,9 +62,9 @@ alias lt="eza --icons --tree"
 alias lta="eza --icons --tree -lgha"
 
 # batcat
-alias cat='bat --theme=$BAT_THEME --style=plain --paging=never $@'
+alias cat='bat --theme="Catppuccin Mocha" --style=plain --paging=never $@'
 
-alias bat='bat --theme=$BAT_THEME'
+alias bat='bat --theme="Catppuccin Mocha"'
 
 # fzf
 alias preview='fzf --preview="bat --color=always --style=numbers --line-range=:500 {}"'
@@ -85,8 +85,8 @@ alias getenv="printenv | sort | fzf"
 # Search aliases
 alias getalias="alias | sort | fzf"
 
-# Reload .zshrc
-alias reload="source ~/.zshrc"
+# Reload .bashrc
+alias reload="source ~/.bashrc"
 
 # Unsource shell
 alias unsource="exec $SHELL -l"
@@ -104,14 +104,14 @@ alias bashconf="nvim ~/.bashrc"
 # zshrc
 alias zshconf="nvim ~/.zshrc"
 
-# Check my aliases for zsh
-alias aliases="nvim $ZSH_CUSTOM/aliases.zsh"
+# Check my aliases for bash
+alias aliases="nvim $OSH_CUSTOM/aliases/custom.aliases.sh"
 
 # CLI extras
-alias toysconf="nvim $ZSH_CUSTOM/cli-extras.zsh"
+alias toysconf="nvim $OSH_CUSTOM/aliases/cli-extras.aliases.sh"
 
-# Oh-My-Zsh config directory
-alias ohmyzsh="nvim $ZSH"
+# Oh-My-Bash config directory
+alias ohmybash="nvim $OSH"
 
 # Neovim config directory with lazyvim setup
 alias nvimconf="nvim $XDG_CONFIG_HOME/nvim"
