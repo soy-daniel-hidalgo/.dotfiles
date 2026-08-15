@@ -121,3 +121,5 @@ alias nvimconf="nvim $XDG_CONFIG_HOME/nvim"
 
 # tmux
 alias tmuxconf="nvim $XDG_CONFIG_HOME/tmux/tmux.conf"
+
+alias vim=nvim
