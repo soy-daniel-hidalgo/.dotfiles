@@ -15,7 +15,7 @@ background-blur = true
 background-opacity-cells = true
 
 # Theme
-# theme = light:Catppuccin Macchiato,dark:Catppuccin Mocha
+# theme = light:Catppuccin Latte,dark:Catppuccin Mocha
 theme = Catppuccin Mocha
 
 # GTK4
