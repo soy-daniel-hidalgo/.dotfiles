@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 
-art="$(source ~/.scripts/colorscripts/panes)"
+if [ -n "$ZSH_VERSION" ]; then
+  art="$(source ~/.scripts/colorscripts/panes)"
+  CURRENT_SHELL='zsh'
+elif [ -n "$BASH_VERSION" ]; then
+  art="$(source ~/.scripts/colorscripts/crunchbang-mini)"
+  CURRENT_SHELL='bash'
+fi
 
 # read system info
 read -r host </proc/sys/kernel/hostname
@@ -85,7 +91,7 @@ printf "            $art"
 printf "
 ${c5} ${c5}${host}
 ${c5} ${c3}window manager${c0} ~ ${wm}
-${c5} ${c3}shell${c0} ~ ${SHELL##*/}
+${c5} ${c3}shell${c0} ~ ${CURRENT_SHELL##*/}
 ${c5} ${c3}ram${c0} ~ $(get_mem)
 ${c5} ${c3}init${c0} ~ $(get_init)
 ${c5} ${c3}os${c0} ~ ${PRETTY_NAME}

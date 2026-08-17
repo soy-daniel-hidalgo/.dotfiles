@@ -5,4 +5,4 @@ alias panes="source ~/.scripts/colorscripts/panes"
 alias jfetch="source ~/.scripts/jfetch"
 
 # local weather
-weatherin() { curl -s wttr.in/"$1" }
+weatherin() { curl -s wttr.in/"$1"; }

@@ -12,7 +12,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# ZSH_THEME="catppuccin-mocha"
+# ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -79,14 +79,13 @@ plugins=(
 	zsh-syntax-highlighting
 	zsh-bat
 	zsh-fzf-history-search
-	jsontools                  # Invokes handy CLI tools for dealing with json data
 	eza                        # Provides aliases that invoke the eza utility rather than ls
-	web-search                 # Adds aliases for searching with Google, Wiki, Bing, YouTube and other popular services
 	command-not-found          # Suggests packages to be installed if a command cannot be found
 )
 
 source $ZSH/oh-my-zsh.sh
 
+# User configuration
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # Compilation flags
@@ -110,7 +109,7 @@ HISTSIZE=1000
 SAVEHIST=$HISTSIZE
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/daniel/.zshrc'
+zstyle :compinstall filename "$HOME/.zshrc"
 
 autoload -Uz compinit
 compinit
@@ -130,53 +129,7 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
-# Docs: https://github.com/junegunn/fzf
-# Set up fzf key bindings and fuzzy completion
-# source <(fzf --zsh)
-
-# export FZF_DEFAULT_OPTS="--color=fg:${fg},bg:${bg},hl:${purple},fg+:${fg},bg+:${bg_highlight},hl+:${purple},info:${blue},prompt:${cyan},pointer:${cyan},marker:${cyan},spinner:${cyan},header:${cyan}"
-
-# Changing the behaviour of fzf, uses fd instead of fzf
-# export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
-# export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-# export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
-
-# Use fd (https://github.com/sharkdp/fd) for listing path candidates.
-# - The first argument to the function ($1) is the base path to start traversal
-# - See the source code (completion.{bash,zsh}) for the details.
-# _fzf_compgen_path() {
-#  fd --hidden --exclude .git . "$1"
-# }
-
-# Use fd to generate the list for directory completion
-# _fzf_compgen_dir() {
-#  fd --type=d --hidden --exclude .git . "$1"
-# }
-
-# Add fzf-git functionality - https://github.com/junegunn/fzf-git.sh.git
-# source ~/fzf-git.sh/fzf-git.sh
-
-# show_file_or_dir_preview="if [ -d {} ]; then eza --tree --color=always {} | head -200; else bat -n --color=always --line-range :500 {}; fi"
-
-# export FZF_CTRL_T_OPTS="--preview '$show_file_or_dir_preview'"
-# export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
-
-# Advanced customization of fzf options via _fzf_comprun function
-# - The first argument to the function is the name of the command.
-# - You should make sure to pass the rest of the arguments to fzf.
-# _fzf_comprun() {
-#   local command=$1
-#   shift
-# 
-#   case "$command" in
-#     cd)           fzf --preview 'eza --tree --color=always {} | head -200' "$@" ;;
-#     export|unset) fzf --preview "eval 'echo \${}'"         "$@" ;;
-#     ssh)          fzf --preview 'dig {}'                   "$@" ;;
-#     *)            fzf --preview "$show_file_or_dir_preview" "$@" ;;
-#   esac
-# }
-
 # Oh My Posh - The most customizable and fastest prompt engine for any shell.
 # Docs: https://ohmyposh.dev/
 # oh-my-posh "catppuccin" theme
-eval "$(oh-my-posh init zsh --config ~/.config/ghostty/ohmyposh-theme.json)"
+eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/catppuccin_mocha.omp.json)"
