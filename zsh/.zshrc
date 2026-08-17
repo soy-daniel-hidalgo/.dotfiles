@@ -132,4 +132,4 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 # Oh My Posh - The most customizable and fastest prompt engine for any shell.
 # Docs: https://ohmyposh.dev/
 # oh-my-posh "catppuccin" theme
-eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/catppuccin_mocha.omp.json)"
+eval "$(oh-my-posh init zsh --config $XDG_CONFIG_HOME/ohmyposh/catppuccin_mocha.omp.json)"
