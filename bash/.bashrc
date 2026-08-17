@@ -166,11 +166,11 @@ export HISTCONTROL=ignoreboth:erasedups
 # Ignore case sensitive completion
 bind 'set completion-ignore-case on'
 
-# Loads ble.sh for syntax highlighting and auto-suggestions 
-# Docs: https://github.com/akinomyoga/ble.sh/wiki
-[[ $- == *i* ]] && source ~/.local/share/blesh/ble.sh
-
 # Oh My Posh - The most customizable and fastest prompt engine for any shell
 # Docs: https://ohmyposh.dev/
 # oh-my-posh "catppuccin" theme
-eval "$(oh-my-posh init bash --config ~/.config/ohmyposh/catppuccin.omp.json)"
+eval "$(oh-my-posh init bash --config $XDG_CONFIG_HOME/ohmyposh/catppuccin.omp.json)"
+
+# Loads ble.sh for syntax highlighting and auto-suggestions
+# Docs: https://github.com/akinomyoga/ble.sh/wiki
+[[ $- == *i* ]] && source ~/.local/share/blesh/ble.sh
