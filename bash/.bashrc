@@ -104,7 +104,7 @@ completions=(
 aliases=(
   general
   custom
-  cli-extras
+  shellscripts
 )
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-bash/plugins/*)
