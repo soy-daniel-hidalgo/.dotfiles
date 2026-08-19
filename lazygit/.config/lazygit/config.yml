@@ -1,0 +1,15 @@
+gui:
+  # if true, capture mouse events
+  mouseEvents: true
+
+  # fraction of the total screen width to use for the left side section
+  sidePanelWidth: 0.2333
+
+  # if true, increase the height of the focused side window; creating an accordion effect
+  expandFocusedSidePanel: false
+
+  # format used when displaying time e.g. commit time
+  timeFormat: '02 Jan 06 15:04'
+
+  # format used when displaying time if the time is less than 24 hours ago
+  shortTimeFormat: '15:04'
