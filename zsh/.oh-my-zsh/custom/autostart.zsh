@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 clear
-source ~/.scripts/jfetch
+source ~/.local/bin/jfetch

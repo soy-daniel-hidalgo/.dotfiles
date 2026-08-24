@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
 if [ -n "$ZSH_VERSION" ]; then
-  art="$(source ~/.scripts/colorscripts/panes)"
+  art="$(source ~/.local/bin/panes)"
   CURRENT_SHELL='zsh'
 elif [ -n "$BASH_VERSION" ]; then
-  art="$(source ~/.scripts/colorscripts/crunchbang-mini)"
+  art="$(source ~/.local/bin/crunchbang-mini)"
   CURRENT_SHELL='bash'
 fi
 
