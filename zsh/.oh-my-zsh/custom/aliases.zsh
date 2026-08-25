@@ -30,25 +30,22 @@ fi
 # Quick access
 
 # Images
-alias pics="cd ~/Pictures"
+alias pics="cd $XDG_PICTURES_DIR"
 
 # Videos
-alias videos="cd ~/Videos"
+alias videos="cd $XDG_VIDEOS_DIR"
 
 # Downloads
-alias downloads="cd ~/Downloads"
+alias downloads="cd $XDG_DOWNLOAD_DIR"
 
 # Documents
-alias docs="cd ~/Documents"
+alias docs="cd $XDG_DOCUMENTS_DIR"
 
 # Desktop
-alias desk="cd ~/Desktop"
+alias desk="cd $XDG_DESKTOP_DIR"
 
 # Music
-alias music="cd ~/Music"
-
-# Applications
-alias apps="cd ~/Applications"
+alias music="cd $XDG_MUSIC_DIR"
 
 # CLI navigation
 
