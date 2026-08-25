@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 clear
-source ~/.local/bin/jfetch
+source $XDG_BIN_HOME/jfetch
