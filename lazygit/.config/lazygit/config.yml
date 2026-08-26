@@ -1,15 +1,47 @@
 gui:
-  # if true, capture mouse events
+  # If true, capture mouse events
   mouseEvents: true
 
-  # fraction of the total screen width to use for the left side section
+  # Fraction of the total screen width to use for the left side section
   sidePanelWidth: 0.2333
 
-  # if true, increase the height of the focused side window; creating an accordion effect
+  # If true, increase the height of the focused side window (accordion effect)
   expandFocusedSidePanel: false
 
-  # format used when displaying time e.g. commit time
+  # Format used when displaying time (e.g., commit time) - 24h format
   timeFormat: '02 Jan 06 15:04'
 
-  # format used when displaying time if the time is less than 24 hours ago
+  # Format used when displaying time if the time is less than 24 hours ago
   shortTimeFormat: '15:04'
+
+  # Catppuccin Mocha theme with Lavender accent
+  theme:
+    activeBorderColor:
+      - '#b4befe'
+      - bold
+    inactiveBorderColor:
+      - '#a6adc8'
+    searchingActiveBorderColor:
+      - '#f9e2af'
+    optionsTextColor:
+      - '#89b4fa'
+    selectedLineBgColor:
+      - '#313244'
+    inactiveViewSelectedLineBgColor:
+      - '#6c7086'
+    cherryPickedCommitFgColor:
+      - '#b4befe'
+    cherryPickedCommitBgColor:
+      - '#45475a'
+    markedBaseCommitFgColor:
+      - '#89b4fa'
+    markedBaseCommitBgColor:
+      - '#f9e2af'
+    unstagedChangesColor:
+      - '#f38ba8'
+    defaultFgColor:
+      - '#cdd6f4'
+
+# Custom author colors mapping
+authorColors:
+  '*': '#b4befe'
