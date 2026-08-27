@@ -196,7 +196,7 @@ Navigate to the `~/.dotfiles` directory and apply only the packages you need usi
 cd ~/.dotfiles
 
 # apply all configurations
-stow bash zsh git ghostty ohmyposh shellscripts nvim tmux lazygit vscode fastfetch --adopt
+stow bash zsh git ghostty ohmyposh shellscripts nvim tmux lazygit vscode fastfetch yazi --adopt
 ```
 
 > [!IMPORTANT]
@@ -252,6 +252,7 @@ Run `nvim` to launch Neovim and trigger the automatic plugin installation via `l
 ├── shellscripts/          # Helper scripts & colorscripts
 ├── tmux/                  # Tmux & TPM plugin manager setup
 ├── vscode/                # Visual Studio Code settings & keybindings
+├── yazi/                  # Yazi terminal file manager config & theme
 ├── zsh/                   # Zsh & Oh My Zsh framework setup
 ├── .gitignore             # Files ignored by Git
 ├── .gitmodules            # Git submodules configuration
