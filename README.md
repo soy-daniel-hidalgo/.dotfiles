@@ -196,7 +196,7 @@ Navigate to the `~/.dotfiles` directory and apply only the packages you need usi
 cd ~/.dotfiles
 
 # apply all configurations
-stow bash zsh git ghostty ohmyposh shellscripts nvim tmux lazygit vscode fastfetch yazi --adopt
+stow bash eza fastfetch ghostty git git-delta lazygit nvim ohmyposh shellscripts tmux vscode yazi zsh --adopt
 ```
 
 > [!IMPORTANT]
@@ -243,6 +243,7 @@ Run `nvim` to launch Neovim and trigger the automatic plugin installation via `l
 ```text
 ~/.dotfiles/
 ├── bash/                  # Bash & Oh My Bash configuration
+├── eza/                   # Custom configuration for eza
 ├── fastfetch/             # Fastfetch configuration files
 ├── ghostty/               # Ghostty config integrated with Oh My Posh config 
 ├── git/                   # Global Git config & .gitignore_global
