@@ -6,9 +6,13 @@
 	excludesfile = ~/.config/git/ignore
 [interactive]
 	diffFilter = delta --color-only
+[include]
+  # include catppuccin themes into gitconfig
+  path = ~/.config/delta/themes/catppuccin.gitconfig
 [delta]
-	navigate = true    # use n and N to move between diff sections
-	dark = true        # or light = true, or omit for auto-detection
+  features = catppuccin-mocha # desired catppuccin flavor for delta
+	navigate = true             # use n and N to move between diff sections
+	dark = true                 # or light = true, or omit for auto-detection
 	side-by-side = true
 	line-numbers = true
 [merge]
