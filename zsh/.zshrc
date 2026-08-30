@@ -176,4 +176,6 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 #     *)            fzf --preview "$show_file_or_dir_preview" "$@" ;;
 #   esac
 # }
-#
+
+# oh-my-posh
+eval "$(oh-my-posh init zsh --config ~/.config/ghostty/theme.ghostty.json)"
