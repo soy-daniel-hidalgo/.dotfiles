@@ -1,0 +1,28 @@
+# ========================================================
+# Ghostty - Terminal Emulator Config
+# Docs: https://ghostty.org/docs/config/reference
+# =========================================================
+
+# General
+language = en
+
+# Font
+font-size = 15
+
+# Background
+background-opacity = 0.9
+
+# Theme
+theme = light:Challenger Deep,dark:Vercel
+
+# GTK4
+gtk-titlebar = false
+
+# Cursor
+cursor-style = block
+adjust-cursor-thickness = 5
+
+# Window
+window-padding-x = 12
+window-padding-y = 12
+window-decoration = none
