@@ -5,6 +5,9 @@
 # manually set language environment
 export LANG=es_ES.UTF-8
 
+# manually set ANSI color codes
+export TERM="xterm-256color"
+
 # manually set XDG_CONFIG_HOME if previously undefined 
 export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
 
