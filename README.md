@@ -264,4 +264,4 @@ Run `nvim` to launch Neovim and trigger the automatic plugin installation via `l
 
 ## :page_facing_up: License
 
-This repository is licensed under the MIT License. Feel free to use, adapt, or copy any part of these dotfiles for your own setup.
+This project is licensed under the MIT License, which is included in the root directory of this repository. Feel free to use, adapt, or copy any part of these dotfiles for your own setup.
