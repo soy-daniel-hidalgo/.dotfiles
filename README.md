@@ -132,8 +132,8 @@ curl -s https://ohmyposh.dev/install.sh | bash -s
 * **Debian / Ubuntu / Linux Mint:**
 
 ```bash
-# standard TUIs & CLI utilities + lazygit
-sudo apt install -y eza bat fzf fd-find zoxide htop ripgrep jq lazygit
+# TUIs & CLI utilities + lazygit
+sudo apt install -y eza bat fzf fd-find zoxide htop ripgrep jq lazygit fastfetch
 
 # latest git-delta release
 ARCH=$(dpkg --print-architecture) && \
@@ -150,8 +150,8 @@ sudo apt update && sudo apt install -y yazi
 * **Fedora:**
 
 ```bash
-# standard TUIs & CLI utilities
-sudo dnf5 install -y eza bat fzf fd-find zoxide htop ripgrep jq
+# TUIs & CLI utilities + lazygit
+sudo dnf5 install -y eza bat fzf fd-find zoxide htop ripgrep jq fastfetch
 
 # lazygit
 sudo dnf5 copr enable -y atim/lazygit && sudo dnf5 install -y lazygit
@@ -196,7 +196,7 @@ Navigate to the `~/.dotfiles` directory and apply only the packages you need usi
 cd ~/.dotfiles
 
 # apply all configurations
-stow bash zsh git ghostty ohmyposh shellscripts nvim tmux lazygit vscode --adopt
+stow bash zsh git ghostty ohmyposh shellscripts nvim tmux lazygit vscode fastfetch --adopt
 ```
 
 > [!IMPORTANT]
@@ -243,6 +243,7 @@ Run `nvim` to launch Neovim and trigger the automatic plugin installation via `l
 ```text
 ~/.dotfiles/
 ├── bash/                  # Bash & Oh My Bash configuration
+├── fastfetch/             # Fastfetch configuration files
 ├── ghostty/               # Ghostty config integrated with Oh My Posh config 
 ├── git/                   # Global Git config & .gitignore_global
 ├── lazygit/               # Lazygit configuration
