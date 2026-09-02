@@ -177,5 +177,7 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 #   esac
 # }
 
-# oh-my-posh
+# Oh My Posh - The most customizable and fastest prompt engine for any shell.
+# Docs: https://ohmyposh.dev/
+# oh-my-posh "catppuccin" theme
 eval "$(oh-my-posh init zsh --config ~/.config/ghostty/theme.ghostty.json)"
