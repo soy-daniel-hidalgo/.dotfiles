@@ -92,6 +92,9 @@ alias zshenv="nvim ~/.zshenv"
 ## Check my aliases
 alias aliases="nvim $ZSH/custom/aliases.zsh"
 
+## CLI toys
+alias toysconf="nvim $ZSH/custom/toysrc.zsh"
+
 ## Oh-My-Zsh config directory
 alias omzconf="nvim $ZSH"
 
