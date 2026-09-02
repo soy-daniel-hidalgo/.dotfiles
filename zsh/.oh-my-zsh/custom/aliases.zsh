@@ -89,6 +89,9 @@ alias zshconf="nvim ~/.zshrc"
 ## zshenv
 alias zshenv="nvim ~/.zshenv"
 
+## autostart
+alias autostart="nvim $ZSH/custom/autostart.zsh"
+
 ## Check my aliases
 alias aliases="nvim $ZSH/custom/aliases.zsh"
 
