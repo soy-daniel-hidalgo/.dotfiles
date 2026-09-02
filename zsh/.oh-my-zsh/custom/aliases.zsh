@@ -1,13 +1,31 @@
-# Package manager dnf5
+# Package managers dnf5, dnf & apt
 
 # Update dependencies
-alias update="sudo dnf5 update"
+if command -v dnf5 &> /dev/null; then
+    alias update="sudo dnf5 update -y"
+elif command -v dnf &> /dev/null; then
+    alias update="sudo dnf upgrade -y"
+elif command -v apt &> /dev/null; then
+    alias update="sudo apt update && sudo apt upgrade -y"
+fi
 
 # Autoremove unneeded packages
-alias autoremove="sudo dnf5 autoremove"
+if command -v dnf5 &> /dev/null; then
+    alias autoremove="sudo dnf5 autoremove"
+elif command -v dnf &> /dev/null; then
+    alias autoremove="sudo dnf autoremove"
+elif command -v apt &> /dev/null; then
+    alias autoremove="sudo apt autoremove"
+fi
 
 # List installed packages
-alias installed="dnf5 list --installed | fzf"
+if command -v dnf5 &> /dev/null; then
+    alias installed="dnf5 list --installed | fzf"
+elif command -v dnf &> /dev/null; then
+    alias installed="dnf list --installed | fzf"
+elif command -v apt &> /dev/null; then
+    alias installed="apt list --installed | fzf"
+fi
 
 # Quick access
 
