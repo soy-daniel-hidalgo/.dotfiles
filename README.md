@@ -51,7 +51,7 @@ Before deploying these dotfiles onto a new system, ensure you have the following
 ```bash
 sudo apt update && sudo apt install -y bash zsh git stow neovim tmux curl
 
-# ghostty
+# Install the community-built ghostty .deb package from mkasberg/ghostty-ubuntu
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/mkasberg/ghostty-ubuntu/HEAD/install.sh)"
 ```
 
@@ -60,7 +60,7 @@ sudo apt update && sudo apt install -y bash zsh git stow neovim tmux curl
 ```bash
 sudo dnf5 install -y bash zsh git stow neovim tmux curl
 
-# ghostty
+# Install ghostty from the COPR repository
 sudo dnf5 copr enable -y scottames/ghostty && sudo dnf5 install -y ghostty
 ```
 
@@ -127,21 +127,26 @@ To use the Oh My Posh prompt engine, run the official installation script:
 curl -s https://ohmyposh.dev/install.sh | bash -s
 ```
 
-### Step 6: Install useful TUI & CLI utilities
+### Step 6: Install useful TUIs and shell utilities
+
+Install a collection of terminal user interfaces (TUI) and command-line utilities for system monitoring, file navigation, text processing, Git, and general shell productivity.
 
 * **Debian / Ubuntu / Linux Mint:**
 
 ```bash
-# TUIs & CLI utilities + lazygit
-sudo apt install -y eza bat fzf fd-find zoxide htop ripgrep jq lazygit fastfetch
+# Install the shell utilities
+sudo apt install -y batcat eza fd-find fzf jq ripgrep zoxide
 
-# latest git-delta release
+# Install the latest release of git-delta
 ARCH=$(dpkg --print-architecture) && \
 URL=$(curl -s https://api.github.com/repos/dandavison/delta/releases/latest | grep "browser_download_url.*git-delta_.*_${ARCH}\.deb" | cut -d : -f 2,3 | tr -d \") && \
 wget -O /tmp/git-delta.deb "$URL" && \
 sudo dpkg -i /tmp/git-delta.deb && rm /tmp/git-delta.deb
 
-# yazi
+# Install the terminal user interfaces (TUI)
+sudo apt install -y btop cava fastfetch lazygit
+
+# Install yazi from its official repository
 curl -fsSL https://yazi-rs.github.io/builds/yazi-keyring.gpg | sudo tee /usr/share/keyrings/yazi-keyring.gpg >/dev/null && \
 echo 'deb [signed-by=/usr/share/keyrings/yazi-keyring.gpg] https://yazi-rs.github.io/builds/ stable main' | sudo tee /etc/apt/sources.list.d/yazi.list >/dev/null && \
 sudo apt update && sudo apt install -y yazi
@@ -150,16 +155,16 @@ sudo apt update && sudo apt install -y yazi
 * **Fedora:**
 
 ```bash
-# TUIs & CLI utilities + lazygit
-sudo dnf5 install -y eza bat fzf fd-find zoxide htop ripgrep jq fastfetch
+# Install the shell utilities
+sudo dnf5 install -y bat eza fd-find fzf git-delta jq ripgrep zoxide
 
-# lazygit
+# Install the available terminal user interfaces (TUI)
+sudo dnf5 install btop cava fastfetch
+
+# Install lazygit from the COPR repository
 sudo dnf5 copr enable -y atim/lazygit && sudo dnf5 install -y lazygit
 
-# git-delta
-sudo dnf5 install -y git-delta
-
-# yazi
+# Install yazi from the COPR repository
 sudo dnf copr enable -y lihaohong/yazi && sudo dnf install -y yazi
 ```
 
@@ -196,7 +201,7 @@ Navigate to the `~/.dotfiles` directory and apply only the packages you need usi
 cd ~/.dotfiles
 
 # apply all configurations
-stow bash eza fastfetch ghostty git git-delta lazygit nvim ohmyposh shellscripts tmux yazi zsh --adopt
+stow bash btop cava eza fastfetch ghostty git-delta git lazygit nvim ohmyposh shellscripts tmux yazi zsh --adopt
 ```
 
 > [!IMPORTANT]
@@ -242,23 +247,26 @@ Run `nvim` to launch Neovim and trigger the automatic plugin installation via `l
 
 ```text
 ~/.dotfiles/
-├── bash/                  # Bash & Oh My Bash configuration
-├── eza/                   # Custom configuration for eza
-├── fastfetch/             # Fastfetch configuration files
-├── ghostty/               # Ghostty config integrated with Oh My Posh config 
-├── git/                   # Global Git config & .gitignore_global
-├── lazygit/               # Lazygit configuration
-├── nvim/                  # Neovim & LazyVim distribution setup
-├── ohmyposh/              # Oh My Posh custom themes & scripts
-├── shellscripts/          # Helper scripts & colorscripts
-├── tmux/                  # Tmux & TPM plugin manager setup
-├── yazi/                  # Yazi terminal file manager config & theme
-├── zsh/                   # Zsh & Oh My Zsh framework setup
-├── .gitignore             # Files ignored by Git
-├── .gitmodules            # Git submodules configuration
-├── .stow-local-ignore     # Files ignored by GNU Stow during symlinking
-├── LICENSE                # MIT License file
-└── README.md              # Repository documentation — You are here \(•◡•)/
+├── bash/                  # Bash shell & Oh My Bash environment setup
+├── btop/                  # System resource monitor theme & config
+├── cava/                  # Audio visualizer preferences & color profiles
+├── eza/                   # Custom themes for modern ls experience
+├── fastfetch/             # System information display configuration & custom logo
+├── ghostty/               # Ghostty simple configuration
+├── git-delta/             # Delta syntax-highlighting pager config for Git
+├── git/                   # Global git user config & .gitignore_global
+├── lazygit/               # Lazygit keybindings, integrations & themes
+├── nvim/                  # Neovim IDE configuration based on LazyVim
+├── ohmyposh/              # Custom prompt themes & engine configs
+├── shellscripts/          # Custom utility scripts & colorscripts
+├── tmux/                  # Tmux terminal multiplexer settings & TPM plugins
+├── yazi/                  # Yazi TUI file manager plugins, keybindings & themes
+├── zsh/                   # Zsh & Oh My Zsh framework environment setup
+├── .gitignore             # Files ignored by git tracking
+├── .gitmodules            # Submodule bindings for external tools & plugins
+├── .stow-local-ignore     # Prevents non-dotfile patterns from symlinking
+├── LICENSE                # Open-source MIT License
+└── README.md              # Repository documentation & setup guide — You are here \(•◡•)/
 ```
 
 ## :page_facing_up: License
