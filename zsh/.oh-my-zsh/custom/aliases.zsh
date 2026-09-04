@@ -102,8 +102,8 @@ alias toysconf="nvim $ZSH/custom/toysrc.zsh"
 alias omzconf="nvim $ZSH"
 
 ## Neovim config directory with lazyvim setup
-alias nvimconf="nvim ~/.config/nvim"
+alias nvimconf="nvim $XDG_CONFIG_HOME/nvim"
 
 ## tmux
-alias tmuxconf="nvim ~/.tmux.conf"
+alias tmuxconf="nvim $XDG_CONFIG_HOME/tmux/tmux.conf"
 
