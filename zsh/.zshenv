@@ -5,6 +5,9 @@
 # manually set language environment
 export LANG=es_ES.UTF-8
 
+# manually set XDG_CONFIG_HOME if previously undefined 
+export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
+
 # preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
    export EDITOR='nvim'
@@ -12,11 +15,9 @@ else
    export EDITOR='nano'
 fi
 
-# batcat
 # NOTE: the bat command supports a config-file by default
 export BAT_THEME="Dracula"
 
 export BAT_PAGER="$PAGER -RF" # less is the default pager
 
-# man
 # export MANPAGER="sh -c 'col -bx | bat -l man -p'"
