@@ -108,7 +108,7 @@ alias zshconf="nvim ~/.zshrc"
 alias aliases="nvim $OSH_CUSTOM/aliases/custom.aliases.sh"
 
 # CLI extras
-alias toysconf="nvim $OSH_CUSTOM/aliases/cli-extras.aliases.sh"
+alias scriptsconf="nvim $OSH_CUSTOM/aliases/shellscripts.aliases.sh"
 
 # Oh-My-Bash config directory
 alias ohmybash="nvim $OSH"
