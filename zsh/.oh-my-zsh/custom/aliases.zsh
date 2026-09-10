@@ -67,17 +67,17 @@ alias cat='bat --theme=$BAT_THEME --style=plain --paging=never $@'
 alias bat='bat --theme=$BAT_THEME'
 
 # fzf
-alias preview='fzf --preview "batcat --color=always --style=numbers --line-range=:500 {}"'
+alias preview='fzf --preview="bat --color=always --style=numbers --line-range=:500 {}"'
 
 alias edit='nvim $(preview)'
 
-# Large files on disk
+# File size on current/working directory
 alias largefile="du -h -x -s -- * | sort -r -h | head -20"
 
 # Utilities
 
 # Search manual
-alias findman="compgen -c | fzf | sort | xargs man"
+alias findmanual="compgen -c | fzf | sort | xargs man"
 
 # Search environment variables
 alias getenv="printenv | sort | fzf"
@@ -107,9 +107,6 @@ alias zshconf="nvim ~/.zshrc"
 # zshenv
 alias zshenv="nvim ~/.zshenv"
 
-# autostart
-alias autostart="nvim $ZSH/custom/autostart.zsh"
-
 # Check my aliases
 alias aliases="nvim $ZSH/custom/aliases.zsh"
 
@@ -124,4 +121,3 @@ alias nvimconf="nvim $XDG_CONFIG_HOME/nvim"
 
 # tmux
 alias tmuxconf="nvim $XDG_CONFIG_HOME/tmux/tmux.conf"
-
