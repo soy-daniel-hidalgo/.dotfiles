@@ -10,7 +10,9 @@
   },
   "blocks": [
     {
+      "type": "prompt",
       "alignment": "left",
+      "newline": true,
       "segments": [
         {
           "background": "p:blue",
