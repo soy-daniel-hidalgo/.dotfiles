@@ -1,0 +1,123 @@
+# Package managers dnf5, dnf & apt
+
+# Update dependencies
+if command -v dnf5 &>/dev/null; then
+  alias update="sudo dnf5 update -y"
+elif command -v dnf &>/dev/null; then
+  alias update="sudo dnf upgrade -y"
+elif command -v apt &>/dev/null; then
+  alias update="sudo apt update && sudo apt upgrade -y"
+fi
+
+# Autoremove unneeded packages
+if command -v dnf5 &>/dev/null; then
+  alias autoremove="sudo dnf5 autoremove"
+elif command -v dnf &>/dev/null; then
+  alias autoremove="sudo dnf autoremove"
+elif command -v apt &>/dev/null; then
+  alias autoremove="sudo apt autoremove"
+fi
+
+# List installed packages
+if command -v dnf5 &>/dev/null; then
+  alias installed="dnf5 list --installed | fzf"
+elif command -v dnf &>/dev/null; then
+  alias installed="dnf list --installed | fzf"
+elif command -v apt &>/dev/null; then
+  alias installed="apt list --installed | fzf"
+fi
+
+# Quick access
+
+# Images
+alias pics="cd ~/Pictures"
+
+# Videos
+alias videos="cd ~/Videos"
+
+# Downloads
+alias downloads="cd ~/Downloads"
+
+# Documents
+alias docs="cd ~/Documents"
+
+# Desktop
+alias desk="cd ~/Desktop"
+
+# Music
+alias music="cd ~/Music"
+
+# Applications
+alias apps="cd ~/Applications"
+
+# CLI navigation
+
+# eza
+alias ls="eza --icons --color=always --git --no-filesize --no-time --no-user --no-permissions"
+
+alias la="eza --icons -lgha --group-directories-first"
+
+alias lt="eza --icons --tree"
+
+alias lta="eza --icons --tree -lgha"
+
+# batcat
+alias cat='bat --theme="Catppuccin Mocha" --style=plain --paging=never $@'
+
+alias bat='bat --theme="Catppuccin Mocha"'
+
+# fzf
+alias preview='fzf --preview="bat --color=always --style=numbers --line-range=:500 {}"'
+
+alias edit='nvim $(preview)'
+
+# File size on current/working directory
+alias largefile="du -h -x -s -- * | sort -r -h | head -20"
+
+# Utilities
+
+# Search manual
+alias findmanual="compgen -c | fzf | sort | xargs man"
+
+# Search environment variables
+alias getenv="printenv | sort | fzf"
+
+# Search aliases
+alias getalias="alias | sort | fzf"
+
+# Reload .bashrc
+alias reload="source ~/.bashrc"
+
+# Unsource shell
+alias unsource="exec $SHELL -l"
+
+# Source control
+
+# Print git-log as graph
+alias gitgraph="git log --graph --decorate --abbrev-commit --all --pretty=oneline"
+
+# Edit config files
+
+# bashrc
+alias bashconf="nvim ~/.bashrc"
+
+# zshrc
+alias zshconf="nvim ~/.zshrc"
+
+# Check my aliases for bash
+alias aliases="nvim $OSH_CUSTOM/aliases/custom.aliases.sh"
+
+# CLI extras
+alias toysconf="nvim $OSH_CUSTOM/aliases/cli-extras.aliases.sh"
+
+# Oh-My-Bash config directory
+alias ohmybash="nvim $OSH"
+
+# Neovim config directory with lazyvim setup
+alias nvimconf="nvim $XDG_CONFIG_HOME/nvim"
+
+# tmux
+alias tmuxconf="nvim $XDG_CONFIG_HOME/tmux/tmux.conf"
+
+# vim/neovim
+alias vim=nvim
