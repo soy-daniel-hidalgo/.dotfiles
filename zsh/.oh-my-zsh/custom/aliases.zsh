@@ -104,20 +104,20 @@ alias bashconf="nvim ~/.bashrc"
 # zshrc
 alias zshconf="nvim ~/.zshrc"
 
-# zshenv
-alias zshenv="nvim ~/.zshenv"
+# Check my aliases for zsh
+alias aliases="nvim $ZSH_CUSTOM/aliases.zsh"
 
-# Check my aliases
-alias aliases="nvim $ZSH/custom/aliases.zsh"
-
-# CLI toys
-alias toysconf="nvim $ZSH/custom/toysrc.zsh"
+# CLI extras
+alias toysconf="nvim $ZSH_CUSTOM/cli-extras.zsh"
 
 # Oh-My-Zsh config directory
-alias omzconf="nvim $ZSH"
+alias ohmyzsh="nvim $ZSH"
 
 # Neovim config directory with lazyvim setup
 alias nvimconf="nvim $XDG_CONFIG_HOME/nvim"
 
 # tmux
 alias tmuxconf="nvim $XDG_CONFIG_HOME/tmux/tmux.conf"
+
+# vim/neovim
+alias vim=nvim
