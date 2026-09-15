@@ -21,7 +21,7 @@ fi
 # NOTE: the bat command supports a config-file by default
 export PAGER="less"
 
-export BAT_THEME="Dracula"
+export BAT_THEME="Catppuccin Mocha"
 
 export BAT_PAGER="$PAGER -RF" # less is the default pager
 
