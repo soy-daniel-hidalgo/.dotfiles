@@ -7,7 +7,7 @@
 [![Oh My Posh](https://img.shields.io/badge/Prompt-Oh_My_Posh-1f6fd0?logoColor=white)](https://ohmyposh.dev/)
 [![Neovim](https://img.shields.io/badge/Editor-Neovim-57A143?logo=neovim&logoColor=white)](https://neovim.io/)
 [![LazyVim](https://img.shields.io/badge/IDE-LazyVim-2E7DE9?logo=lazyvim&logoColor=white)](https://www.lazyvim.org/)
-[![Lazygit](https://img.shields.io/badge/Git-Lazygit-80B3FF?logo=git&logoColor=white)](https://github.com/jesseduffield/lazygit)
+[![Lazygit](https://img.shields.io/badge/TUI-Lazygit-80B3FF?logo=git&logoColor=white)](https://github.com/jesseduffield/lazygit)
 [![Tmux](https://img.shields.io/badge/Multiplexer-Tmux-1BB91F?logo=tmux&logoColor=white)](https://github.com/tmux/tmux)
 [![License: MIT](https://img.shields.io/badge/License-MIT-9E95B7.svg)](https://opensource.org/licenses/MIT)
 
